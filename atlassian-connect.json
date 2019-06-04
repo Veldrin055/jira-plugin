@@ -1,0 +1,48 @@
+{
+    "key": "top-reporters",
+    "name": "Top Reporters",
+    "description": "Top Reporters addon for remote interview",
+    "vendor": {
+        "name": "Daniel Morrison",
+        "url": "https://www.atlassian.com/angrynerds"
+    },
+    "baseUrl": "{{localBaseUrl}}",
+    "links": {
+        "self": "{{localBaseUrl}}/atlassian-connect.json",
+        "homepage": "{{localBaseUrl}}/atlassian-connect.json"
+    },
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed"
+    },
+    "scopes": [
+        "READ"
+    ],
+    "modules": {
+        "jiraProjectTabPanels": [
+            {
+                "key": "top-reporters",
+                "name": {
+                    "value": "Top Reporters"
+                },
+                "url": "/top-reporters?projectId={project.key}",
+                "conditions": [
+                    {
+                        "condition": "user_is_logged_in"
+                    },
+                    {
+                        "condition": "can_use_application",
+                        "params": {
+                            "applicationKey": "jira-servicedesk"
+                        }
+                    }
+                ]
+            }
+         ]
+    },
+    "apiMigrations": {
+        "gdpr": true
+    }
+}

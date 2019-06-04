@@ -1,0 +1,37 @@
+{{!< layout}}
+<header class="aui-page-header">
+  <div class="aui-page-header-inner">
+    <div class="aui-page-header-main intro-header">
+      <h1>Top Reporters</h1>
+    </div>
+  </div>
+</header>
+
+<div class="aui-page-panel main-panel">
+  <div class="aui-page-panel-inner">
+    <section class="aui-page-panel-item">
+      <div class="aui-group">
+        <div class="aui-item">
+          <table>
+            <thead>
+              <tr>
+                {{#each topReporters.[0]}}
+                  <th>{{@key}}</th>
+                {{/each}}
+              </tr>
+            </thead>
+            <tbody>
+              {{#each topReporters}}
+                <tr>
+                  {{#each this}}
+                    <td>{{this}}</td>
+                  {{/each}}
+                </tr>
+              {{/each}}
+            </tbody>
+            </table>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
