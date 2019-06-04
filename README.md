@@ -1,6 +1,8 @@
 # Top Reporters Atlassian Connect App using Express
 
-Here is my remote interview code for displaying top reporters. Start it with `npm start` and some appropriate credentials and it should display a new addon in your JSD project view.
+Simple example on how to create a Jira add-on using Atlassian Connect.
+
+Start it with `npm start` and some appropriate credentials and it should display a new addon in your Jira project view.
 
 ## Improvements to make
 This is a really simple addon that will only work for trivial projects containing a small amount of issues and customers. For anything at scale, a more robust solution would be required. 
